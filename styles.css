@@ -1,0 +1,33 @@
+body {
+	background-color: #111;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.sc__content {
+	font-family: 'Indie Flower', cursive;
+	color: #fff;
+	width: 100%;
+	max-width: 640px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 30px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 48px;
+}
+
+p {
+	margin: 0;
+	font-size: 22px;
+}
+
+#sc__card {
+	width: 100%;
+	max-width: 640px;
+	margin: 0 auto;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bea & Marcus - Vad är det för kön?</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div class="sc">
+		<div class="sc__content">
+			<h1>Vinst varje gång!</h1>
+			<p>Skrapa bort ultraljudet för att se<br> om det blir en flicka eller pojke.</p>
+		</div>
+		<div id="sc__card"></div>
+	</div>
+
+	<script src="scratchcard.min.js"></script>
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			var scContainer = document.getElementById('sc__card');
+			var sc = new ScratchCard('#sc__card', {
+				enabledPercentUpdate: true,
+				scratchType: SCRATCH_TYPE.LINE,
+				// brushSrc: './images/brush.png',
+				containerWidth: scContainer.offsetWidth,
+				containerHeight: scContainer.offsetWidth,
+				imageForwardSrc: './IMG_0795.png',
+				imageBackgroundSrc: '',
+				// htmlBackground: '<p class="test"><strong>Hello i am HTML content !</strong></p>',
+				clearZoneRadius: 30,
+				percentToFinish: 50, // When the percent exceeds 50 on touchend event the callback will be exec.
+				nPoints: 30,
+				pointSize: 4,
+				callback: function () {
+					// alert('Now the window will reload !');
+					// window.location.reload();
+				}
+			})
+			sc.init();
+		});
+</script>
+</body>
+</html>
